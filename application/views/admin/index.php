@@ -1,8 +1,6 @@
 <title>Login</title>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
 <style>
-body{
-background-color:yellow;	
-}
 table{
 background-color:white;
 color:black;
@@ -25,15 +23,20 @@ table{
 <form method=POST action='cek_login'>
 <table align="center">
 	<tr>
-		<td> Nama </td> <td> <input type="text" name="username" required> </td>
+		<td> Nama </td> <td> <input type="text" name="username" class="form-control" required> </td>
 	</tr>
 	
 	<tr>
-		<td> Password </td> <td> <input type="password" name="password" required> </td>
+		<td> Password </td> <td> <input type="password" name="password" class="form-control" required> </td>
 	</tr>
 
 	<tr>
-		<td> </td> <td> <input type="submit"> </td>
+		<td> </td> <td> <input type="submit" class="button"> </td>
 	</tr>
-
+    <tr>
+        <td></td>
+        <td>
+            <a href="<?= base_url();?>" class="button"> Kembali ke Homepage</a>
+        </td>
+    </tr>
 </table>

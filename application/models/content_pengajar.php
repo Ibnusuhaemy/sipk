@@ -9,15 +9,31 @@ class Content_pengajar extends CI_Model{
 	
 		
 		public function jadwal($guru){
-		$sql = $this->db->query("select * from jadwal where pengajar='".$guru."'");	
-		$data = $sql->result_array();	
-		return $data;	
+            $sql = $this->db->query("SELECT * FROM jadwal
+                                INNER JOIN kursus
+                                ON kursus.kelas_alias = jadwal.kelas
+                                INNER JOIN program
+                                ON program.program_alias = jadwal.program
+                                INNER JOIN user
+                                ON user.id_user = jadwal.siswa
+                                WHERE jadwal.pengajar='".$guru."'
+                                ");	
+            $data = $sql->result_array();	
+            return $data;
 		}
 		
 		public function nilai($guru){
-		$sql = $this->db->query("select * from jadwal where pengajar='".$guru."'");	
-		$data = $sql->result_array();	
-		return $data;	
+            $sql = $this->db->query("SELECT * FROM jadwal
+                                INNER JOIN kursus
+                                ON kursus.kelas_alias = jadwal.kelas
+                                INNER JOIN program
+                                ON program.program_alias = jadwal.program
+                                INNER JOIN user
+                                ON user.id_user = jadwal.siswa
+                                WHERE jadwal.pengajar='".$guru."'
+                                ");	
+            $data = $sql->result_array();	
+            return $data;	
 		}
 		
 		public function edit_data_nilai($id){

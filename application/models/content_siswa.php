@@ -29,7 +29,15 @@ class Content_siswa extends CI_Model{
 		}
 		
 		public function jadwal_siswa($siswa){
-		$sql = $this->db->query("select * from jadwal where siswa='".$siswa."'");	
+		$sql = $this->db->query("SELECT * FROM jadwal
+                                INNER JOIN kursus
+                                ON kursus.kelas_alias = jadwal.kelas
+                                INNER JOIN program
+                                ON program.program_alias = jadwal.program
+                                INNER JOIN user
+                                ON user.id_user = jadwal.pengajar
+                                WHERE jadwal.siswa='".$siswa."'
+                                ");	
 		$data = $sql->result_array();	
 		return $data;	
 		}

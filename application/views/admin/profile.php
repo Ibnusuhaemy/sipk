@@ -6,11 +6,11 @@ echo"
 <input type='hidden' name='id_profile' value='".$profile[$i]['id_profile']."'>
 <table>
 <tr>
-<td> Id Profile </td> <td> <input type='text' name='id_profile' value='".$profile[$i]['id_profile']."' size=1 disabled> </td>
+<td> Id Profile </td> <td> <input type='text' name='id_profile' value='".$profile[$i]['id_profile']."' size=1 disabled required='required' class='form-control'> </td>
 </tr>
 
 <tr>
-<td valign=top> Isi  </td> <td> <textarea name='isi' cols=45 rows=15>".$profile[$i]['isi']."</textarea> </td>
+<td valign=top> Isi  </td> <td> <textarea name='isi' cols=45 rows=15 required='required' class='form-control'>".$profile[$i]['isi']."</textarea> </td>
 </tr>
 
 <tr>
@@ -19,11 +19,11 @@ echo"
 
 
 <tr>
-<td> Foto </td> <td> <input type='file' name='foto'> </td>
+<td> Foto </td> <td> <input type='file' name='foto' required='required' class='form-control'> </td>
 </tr>
 
 <tr>
-<td>  </td> <td> <input type='submit' value='Simpan'> </td>
+<td>  </td> <td> <input type='submit' value='Simpan' class='button'> </td>
 </tr>
 
 

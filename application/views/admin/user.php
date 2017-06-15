@@ -3,7 +3,7 @@
 <?php
 echo"
 <h2>Manajemen User </h2><hr>
-<p><a href='".base_url()."admin_tambah_user'><input type=button value=Tambah></a></p>
+<p><a href='".base_url()."admin_tambah_user'><input type=button value=Tambah class=button></a></p>
 <table border=1 cellpadding=4 cellspacing=0 width=100%>
 <tr bgcolor=silver>
 <td> Id User </td> <td> Username </td> <td> Password </td> <td> Status </td> <td> Edit </td> <td> Hapus </td>  

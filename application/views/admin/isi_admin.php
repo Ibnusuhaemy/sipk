@@ -2,7 +2,7 @@
 if(isset($mn)){
 
 if($mn == "admin/home"){
-	echo"<br> <h3>Selamat Datang : ".ucwords($this->session->userdata('username'))." <br> Status Anda Sebagai : ".ucwords($this->session->userdata('status'))."</h3> Untuk Mengelola Web App Silahkan Pilih Module Disamping";	
+	echo"<br> <h3>Selamat Datang : ".ucwords($this->session->userdata('username'))." <br> Status Anda Sebagai : ".ucwords($this->session->userdata('status'))."</h3> Untuk Mengelola Web App Silahkan Pilih Menu Disamping";	
 
 }	
 if($mn == "admin/profile"){
@@ -70,6 +70,18 @@ if($mn == "pengajar/nilai"){
 
 if($mn == "pengajar/edit_nilai"){
 	include"edit_data_nilai.php";	
+}
+
+if($mn == "admin/admin_pengumuman"){
+	include "pengumuman.php";	
+}
+
+if($mn == "admin/tambah_pengumuman"){
+	include "tambah_pengumuman.php";	
+}
+    
+if($mn == "admin/edit_pengumuman"){
+	include "edit_pengumuman.php";	
 }
 
 }

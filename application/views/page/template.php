@@ -35,11 +35,11 @@
 }
 #nav li a{
 	display:block;
-	padding: 0 15px;
+	padding: 0 5px;
 	border-right:1px solid #000;
 	line-height:2.5;
 	float:left;
-	width:100px;
+	width:120px;
 	text-decoration:none;
 	font-family:calibri;
 	font-size:18px;
@@ -65,17 +65,18 @@ input,button{
         <table width="800px" align="center" border=0 class="table">
 
             <tr>
-                <td height="200px" colspan="2"><img src="<?= base_url()."img/school-logo.png"?>" width=800 height=200></td>
+                <td height="200px" colspan="2"><img src="<?= base_url()."img/smart-center-logo.jpg"?>" width=800 height=200></td>
             </tr>	
 
             <tr>
                 <td colspan="2" height="30px" bgcolor="#16a085"> 
                 <ul id="nav">
                 <li><a href="<?= base_url();?>">Home</a></li>
-                <li><a href="profile">Profile</a></li>
-                <li><a href="layanan">Layanan</a></li>
-                <li><a href="about">About</a></li>
+                <li><a href="profile">Program</a></li>
+                <li><a href="layanan">Lokasi</a></li>
+                <li><a href="about">Biaya &amp; Jadwal</a></li>
                 <li><a href="daftar">Pendaftaran</a></li>
+                <li><a href="admin">Login</a></li>
                 </ul>
                 </td>
             </tr>	
@@ -85,7 +86,7 @@ input,button{
             
             
             <tr>
-                <td colspan="2" height="30px" bgcolor="#16a085" align="center"> copyright &copy; by Arip  </td>
+                <td colspan="2" height="30px" bgcolor="#16a085" align="center"> copyright &copy; by Arif Nur Hakim  </td>
             </tr>
 
         </table>

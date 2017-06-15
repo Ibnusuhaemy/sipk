@@ -6,61 +6,6 @@ echo"
 <table>
 
 <tr>
-	<td> Tanggal Mulai </td> <td> 
-	";
-	echo"<select name='tgl_mulai'>";
-	echo"<option>Pilih Tanggal</option>";
-	for($i=1;$i<32;$i++){
-	echo"<option value='$i'>$i</option>";	
-	}
-	echo"</select>";
-	
-	echo"<select name='bln_mulai'>";
-	echo"<option>Pilih Bulan</option>";
-	for($j=1;$j<13;$j++){
-	echo"<option value='$j'>$j</option>";	
-	}
-	echo"</select>";
-	
-	echo"<select name='thn_mulai'>";
-	echo"<option>Pilih Tahun</option>";
-	for($k=2000;$k<2020;$k++){
-	echo"<option value='$k'>$k</option>";	
-	}
-	echo"</select>";
-	
-	echo"</td>
-</tr>
-
-<tr>
-	<td> Tanggal Selesai </td> <td>  ";
-	
-	echo"<select name='tgl_selesai'>";
-	echo"<option>Pilih Tanggal</option>";
-	for($l=1;$l<32;$l++){
-	echo"<option value='$l'>$l</option>";	
-	}
-	echo"</select>";
-	
-	echo"<select name='bln_selesai'>";
-	echo"<option>Pilih Bulan</option>";
-	for($l=1;$l<13;$l++){
-	echo"<option value='$l'>$l</option>";	
-	}
-	echo"</select>";
-	
-	echo"<select name='thn_selesai'>";
-	echo"<option>Pilih Tahun</option>";
-	for($m=2000;$m<2020;$m++){
-	echo"<option value='$m'>$m</option>";	
-	}
-	echo"</select>";
-	
-	
-	echo"</td>
-</tr>
-
-<tr>
 	<td> Pengajar </td> <td> "; 
 	echo"<select name='pengajar'>";
 	$jumlah = count($guru);
@@ -79,11 +24,47 @@ echo"
 
 
 echo"</td></tr><tr>
-	<td> Tempat </td> <td> <input type='text' name='tempat'> </td>
+	<td> Kelas </td> 
+    <td>
+        <select name='kelas' class='form-control' required>
+	        <option value='calabesar'>Calistung A (Besar)</option>
+	        <option value='calakecil'>Calistung A (Kecil)</option>
+	        <option value='calbbesar'>Calistung B (Besar)</option>
+	        <option value='calbkecil'>Calistung B (Kecil)</option>
+	        <option value='kelas1'>Kelas 1</option>
+	        <option value='kelas2'>Kelas 2</option>
+	        <option value='kelas3a'>Kelas 3 (A)</option>
+	        <option value='kelas3b'>Kelas 3 (B)</option>
+	        <option value='kelas4a'>Kelas 4 (A)</option>
+	        <option value='kelas4b'>Kelas 4 (B)</option>
+	        <option value='kelas5a'>Kelas 5 (A)</option>
+	        <option value='kelas5b'>Kelas 5 (B)</option>
+	        <option value='kelas6a'>Kelas 6 (A)</option>
+	        <option value='kelas6b'>Kelas 6 (B)</option>
+	        <option value='kelas6c'>Kelas 6 (C)</option>
+	        <option value='matkelas1'>Matematika - B. Inggris Kelas 1</option>
+	        <option value='matkelas2'>Matematika - B. Inggris Kelas 2</option>
+	        <option value='matkelas3'>Matematika - B. Inggris Kelas 3</option>
+	        <option value='matkelas4'>Matematika - B. Inggris Kelas 4</option>
+	        <option value='matkelas5'>Matematika - B. Inggris Kelas 5</option>
+	        <option value='smp7'>SMP Kelas 7</option>
+	        <option value='smp8'>SMP Kelas 8</option>
+	        <option value='smp9'>SMP Kelas 9</option>
+	    </select>
+    </td>
 </tr>
 
 <tr>
-	<td> Kelas </td> <td> <input type='text' name='kelas'> </td>
+	<td> Program </td> 
+    <td>
+        <select name='program' class='form-control' required>
+            <option value='regulercal'>Program Reguler TK/Calistung (Baca Tulis Hitung)</option>
+            <option value='regulersd1'>Program Reguler 1-5 SD</option>
+            <option value='regulersd2'>Program Reguler 6 SD</option>
+            <option value='regulersmp1'>Program Reguler 7-8 SMP</option>
+            <option value='regulersmp2'>Program Reguler 9 SMP</option>
+        </select>
+    </td>
 </tr>
 
 <tr>

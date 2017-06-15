@@ -1,23 +1,18 @@
 <html>
 <head>
 <title> SIPK </title>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url('assets/css/style.css');?>">
 <style>
-body{
-	background-color:yellow;
-	fonnt-family:calibri;	
-}
 .table{
 	border:1px solid #006699;
 	border-radius:10px;
 	box-shadow:0px 5px 5px 5px #000000;
 	background-color:white;
-	padding:5px;
-	
 }
 
 #nav{
 	list-style:none;
-	background-color:yellow;
+	background-color:#16a085;
 	color:#000000;
 	margin:0px;
 	padding:0px;
@@ -40,8 +35,8 @@ body{
 	font-size:18px;
 }
 #nav li a:hover{
-	background-color:red;
-	color:white;	
+	background-color:#1abc9c;
+	color:white;
 }
 
 input,button{
@@ -61,11 +56,11 @@ if($this->session->userdata('id_user') == 0){
 <table width="800px" align="center" border=0 class="table">
 
 	<tr>
-		<td height="200px" colspan="2"> <img src="<?= base_url()."img/header.jpg"?>" width=100% height=200> </td>
+		<td height="200px" colspan="2"> <img src="<?= base_url()."img/smart-center-logo.jpg"?>" width=800 height=200> </td>
 	</tr>	
 
 	<tr>
-		<td colspan="2" height="40px" bgcolor="yellow" align="right"> 
+		<td colspan="2" height="40px" bgcolor="#16a085" align="right"> 
 		<?php
 		echo " Selamat Datang : ".ucwords($this->session->userdata('username')). " / <a href=\"logout\" onclick=\" return confirm('Yakin Mau Keluar Aplikasi?')\">Logout</a>";
 
@@ -79,23 +74,24 @@ if($this->session->userdata('id_user') == 0){
 		<?php if($this->session->userdata('status') == 'admin') {?>
 		<ul id="nav">
 		<li><a href="<?= base_url();?>admin_home"> &#187; Home</a></li>
-		<li><a href="<?= base_url();?>admin_profile"> &#187; Profile</a></li>
-		<li><a href="<?= base_url();?>admin_layanan">&#187; Layanan</a></li>
-		<li><a href="<?= base_url();?>admin_about">&#187; About</a></li>
+<!--		<li><a href="<?= base_url();?>admin_profile"> &#187; Profile</a></li>-->
+<!--		<li><a href="<?= base_url();?>admin_layanan">&#187; Layanan</a></li>-->
+<!--		<li><a href="<?= base_url();?>admin_about">&#187; About</a></li>-->
 		<li><a href="<?= base_url();?>admin_user">&#187; Manajemen User</a></li>
 		<?php
-		if($this->uri->segment(1) == 'admin_daftar'){
+		  if($this->uri->segment(1) == 'admin_daftar'){
 		?>	
 		<li><a href="<?= base_url();?>admin_daftar"> &#187; Pendaftaran ( <span style="color:black;font-weight:bold"><?= $jumlah; ?> </span> ) </a></li>
 		<?php 
-		}else{
+		  }else{
 		?>
 		<li><a href="<?= base_url();?>admin_daftar">&#187; Pendaftaran </a></li>
 		<?php
-		} 
+		  } 
 		?>
 		<li><a href="<?= base_url();?>admin_pembayaran">&#187; Pembayaran Kursus</a></li>
 		<li><a href="<?= base_url();?>admin_jadwal">&#187; Jadwal Dan Nilai</a></li>
+		<li><a href="<?= base_url();?>admin/pengumuman">&#187; Pengumuman</a></li>
 		</ul>
 		<!-- END ADMIN -->
 		
@@ -121,7 +117,7 @@ if($this->session->userdata('id_user') == 0){
 	</tr>	
 
 	<tr>
-		<td colspan="2" height="40px" bgcolor="yellow" align="center"> copyright &copy; by Erna STIK </td>
+		<td colspan="2" height="40px" bgcolor="#16a085" align="center"> copyright &copy; by Arif Nur Hakim </td>
 	</tr>
 
 </table>
